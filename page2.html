@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  
+  <!-- เชื่อมต่อไฟล์ CSS ที่เราแยกไว้ -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- โหลด Tailwind CSS จาก CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- เชื่อมต่อไฟล์ Config ของ Tailwind ที่เราแยกไว้ -->
+  <script src="tailwind-config.js"></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+  
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 w-full z-50 bg-surface-dark/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm">
+        <div class="h-9 w-9 rounded-xl bg-surface-card flex items-center justify-center">
+          <span class="font-headline-sm text-headline-sm font-bold text-primary">NR</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-text-primary leading-none">Nattakorn R.</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-text-muted mt-space-xs">RSU DIAI | Web Programming</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-space-xs">
+        <a href="page1.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Overview</a>
+        <!-- สังเกตว่าหน้านี้ (Skills) จะมีคลาสแสดงสถานะ Active -->
+        <a href="page2.html" aria-current="page" class="px-space-sm py-space-xs transition-colors bg-surface-container-high text-primary font-medium rounded-xl">Skills &amp; 3D</a>
+        <a href="page3.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Experience</a>
+        <a href="page4.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Education &amp; Contact</a>
+      </nav>
+      <div class="flex items-center gap-space-sm">
+        <div class="hidden sm:flex items-center px-space-sm py-space-xs rounded-xl bg-surface-container-low">
+          <span class="font-label-mono-sm text-label-mono-sm text-secondary">ID: 6903090</span>
+        </div>
+        <a class="hidden lg:inline-flex items-center px-space-sm py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold hover:opacity-90 transition-opacity" href="mailto:nattakorn.r69@rsu.ac.th">Contact</a>
+        <div class="relative flex items-center justify-center">
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://th.bing.com/th/id/OIP.OPTqIjOBCQW8t4_Q_hv83wHaHa?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"/>
+          <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-dark"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]">
+    <div class="flex flex-col w-full">
+      <!-- Dynamic Ambient Glow Backdrops -->
+      <div class="relative w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-xl overflow-hidden">
+        <div class="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-primary-container/10 blur-[130px] pointer-events-none"></div>
+        <div class="absolute top-1/3 -right-24 w-[28rem] h-[28rem] rounded-full bg-secondary-container/15 blur-[140px] pointer-events-none"></div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-tertiary-container/10 blur-[120px] pointer-events-none"></div>
+        
+        <!-- 1. Page Header Banner & Category Filter Pill Strip -->
+        <header class="relative z-10 flex flex-col items-start gap-space-md mb-space-xl">
+          <div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-primary">
+            <span class="material-symbols-outlined text-[16px]">deployed_code</span>
+            <span class="font-label-mono-sm text-label-mono-sm tracking-widest uppercase">Portfolio Dimension // DIAI 6903090</span>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-end justify-between w-full gap-space-lg">
+            <div class="max-w-3xl">
+              <h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-text-primary tracking-tight">
+                Creative Tech &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary">3D Artistry</span>
+              </h1>
+              <p class="font-body-lg text-body-lg text-text-muted mt-space-sm leading-relaxed">
+                สำรวจทักษะ ความหลงใหล และงานอดิเรกของ ณฐกร รัตนารักษ์ — การบรรจบกันของสถาปัตยกรรม UI และโลกเสมือน 3 มิติ สำหรับดิจิทัลแพลตฟอร์มและเกมแห่งอนาคต
+              </p>
+            </div>
+            <!-- Filter Chips / Category Pills (Interactive Vanilla JS State) -->
+            <div class="flex items-center gap-space-xs p-1.5 rounded-xl bg-surface-container-low self-start md:self-end shadow-md">
+              <button class="filter-pill active px-space-md py-space-xs rounded-lg font-label-mono-sm text-label-mono-sm transition-all duration-200 bg-primary-container text-on-primary-container font-semibold shadow-sm" onclick="setGalleryFilter('all', this)" type="button">
+                All Work
+              </button>
+              <button class="filter-pill px-space-md py-space-xs rounded-lg font-label-mono-sm text-label-mono-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" onclick="setGalleryFilter('lowpoly', this)" type="button">
+                Low-Poly 3D
+              </button>
+              <button class="filter-pill px-space-md py-space-xs rounded-lg font-label-mono-sm text-label-mono-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" onclick="setGalleryFilter('props', this)" type="button">
+                Game Props
+              </button>
+              <button class="filter-pill px-space-md py-space-xs rounded-lg font-label-mono-sm text-label-mono-sm transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" onclick="setGalleryFilter('uxui', this)" type="button">
+                UX/UI Frame
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- 2. Main Hobby & Core Proficiency (Desktop Split Layout) -->
+        <section class="relative z-10 w-full mb-space-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+            <!-- Left Side: Craft Manifesto & Isometric Stylized Graphic -->
+            <div class="lg:col-span-8 p-space-lg md:p-space-xl rounded-xl bg-surface-card flex flex-col justify-between relative overflow-hidden shadow-xl">
+              <div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+              <div>
+                <div class="flex items-center justify-between gap-space-md mb-space-md">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+                    <span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary">Creative Specialization // Passion Project</span>
+                  </div>
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted">BLENDER 4.x PIPELINE</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-text-primary tracking-tight mb-space-sm">
+                  Main Hobby &amp; Craft: 3D Modeling &amp; Asset Creation
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+                  เวลาว่างมักจะหมดไปกับการเปิด Blender เพื่อขึ้นรูปทรงเรขาคณิต สกัดความซับซ้อนของสิ่งรอบตัวให้กลายเป็นโมเดล Low-Poly สไตล์มินิมอลที่มีเสน่ห์ ปรับแต่ง Topology และจับคู่แสงสีที่สดใสพร้อมนำไปใช้ในโปรเจกต์เกมและ interactive web experiences อย่างประหยัดทรัพยากร
+                </p>
+              </div>
+              <div class="mt-space-lg p-space-md rounded-lg bg-surface-container-lowest flex items-center justify-between gap-space-md">
+                <div class="flex items-center gap-space-md min-w-0">
+                  <div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+                    <span class="material-symbols-outlined text-[28px]">view_in_ar</span>
+                  </div>
+                  <div class="min-w-0">
+                    <p class="font-label-mono-lg text-label-mono-lg text-text-primary truncate">Optimized Topology Standard</p>
+                    <p class="font-body-sm text-body-sm text-text-muted truncate">Quads-dominant mesh flow, strict face orientation &amp; unified UV island spacing.</p>
+                  </div>
+                </div>
+                <div class="hidden sm:block flex-shrink-0">
+                  <svg class="text-secondary opacity-80" fill="none" height="42" viewbox="0 0 110 42" width="110" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 21L35 6L80 6L100 21L75 36L30 36L10 21Z" fill="none" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.2"></path>
+                    <path d="M35 6L30 36M80 6L75 36M10 21L100 21" stroke="currentColor" stroke-width="1"></path>
+                    <circle cx="35" cy="6" fill="currentColor" r="2.5"></circle>
+                    <circle cx="80" cy="6" fill="currentColor" r="2.5"></circle>
+                    <circle cx="100" cy="21" fill="currentColor" r="2.5"></circle>
+                    <circle cx="75" cy="36" fill="currentColor" r="2.5"></circle>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side: Vertical Stat Tiles -->
+            <div class="lg:col-span-4 flex flex-col gap-space-md">
+              <div class="p-space-lg rounded-xl bg-surface-card flex flex-col justify-between relative overflow-hidden shadow-lg group hover:bg-surface-container-high transition-colors">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm uppercase text-primary">Asset Vault</span>
+                  <span class="material-symbols-outlined text-primary text-[20px]">category</span>
+                </div>
+                <div class="flex items-baseline gap-space-xs">
+                  <span class="font-display-hero text-display-hero-mobile md:text-display-hero text-text-primary">25+</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">Finished Assets</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                  คลังโมเดล Low-Poly พร็อพ สภาพแวดล้อม และสิ่งปลูกสร้างพร้อมส่งออก
+                </p>
+              </div>
+              <div class="p-space-lg rounded-xl bg-surface-card flex flex-col justify-between relative overflow-hidden shadow-lg group hover:bg-surface-container-high transition-colors">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary">Primary Creative Engine</span>
+                  <span class="material-symbols-outlined text-secondary text-[20px]">brush</span>
+                </div>
+                <div class="flex items-baseline gap-space-xs">
+                  <span class="font-headline-lg text-headline-lg text-text-primary">Blender 3D</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary">v4.2 LTS</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                  เครื่องมือหลักในการ Hard-surface modeling, Topology cleanup และ Shader nodes
+                </p>
+              </div>
+              <div class="p-space-lg rounded-xl bg-surface-card flex flex-col justify-between relative overflow-hidden shadow-lg group hover:bg-surface-container-high transition-colors">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm uppercase text-tertiary">Realtime Target</span>
+                  <span class="material-symbols-outlined text-tertiary text-[20px]">sports_esports</span>
+                </div>
+                <div class="flex items-baseline gap-space-xs">
+                  <span class="font-headline-lg text-headline-lg text-text-primary">Roblox Engine</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Test-Ready</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                  FBX Optimization, Decomposition Collisions และ Custom Lighting Setup
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Detailed Skill Proficiency Matrix (3 Columns Grid) -->
+        <section class="relative z-10 w-full mb-space-xl">
+          <div class="flex items-center justify-between mb-space-lg">
+            <div>
+              <span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary">Technical Breakdown</span>
+              <h2 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">Skill Proficiency Matrix</h2>
+            </div>
+            <div class="hidden sm:flex items-center gap-space-xs text-text-muted font-label-mono-sm text-label-mono-sm">
+              <span>MEASURED IN ACTIVE BUILDS</span>
+              <span class="material-symbols-outlined text-[16px]">monitoring</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+            <!-- Column 1: Blender 3D Modeling -->
+            <div class="p-space-lg rounded-xl bg-surface-card flex flex-col justify-between shadow-lg">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[24px]">box</span>
+                  </div>
+                  <span class="px-space-sm py-1 rounded-md bg-surface-container-highest text-primary font-label-mono-sm text-label-mono-sm font-semibold">Adv. Beginner</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Blender 3D Modeling</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+                  เชี่ยวชาญการจัดวาง Vertex, Face, Edge Flow สำหรับ Low-Poly Assets, กำลังศึกษาต่อยอดการทำ High-Poly Sculpting, UV Unwrapping และ PBR Texturing อย่างต่อเนื่อง
+                </p>
+                <div class="space-y-space-xs mb-space-md">
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted">
+                    <span>Low-Poly Topology</span><span class="text-text-primary">85%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+                  </div>
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted pt-space-xs">
+                    <span>UV Map Unwrapping</span><span class="text-text-primary">68%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-primary-container rounded-full" style="width: 68%"></div>
+                  </div>
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted pt-space-xs">
+                    <span>PBR &amp; Cycles Lighting</span><span class="text-text-primary">60%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-surface-tint rounded-full" style="width: 60%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm border-t-0 flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#VertexFlow</span>
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#HardSurface</span>
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#Eevee</span>
+              </div>
+            </div>
+            <!-- Column 2: UX/UI Design & Dev -->
+            <div class="p-space-lg rounded-xl bg-surface-card flex flex-col justify-between shadow-lg">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+                    <span class="material-symbols-outlined text-[24px]">design_services</span>
+                  </div>
+                  <span class="px-space-sm py-1 rounded-md bg-surface-container-highest text-secondary font-label-mono-sm text-label-mono-sm font-semibold">Skilled</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">UX/UI Design &amp; Web Dev</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+                  ออกแบบ User Journey, High-fidelity Wireframes และ Responsive Hierarchy ทั้งมือถือและเดสก์ท็อป พร้อมบูรณาการหลัก Design Tokens และ Clean Semantic Frontend Architecture
+                </p>
+                <div class="space-y-space-xs mb-space-md">
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted">
+                    <span>Design System &amp; Tokens</span><span class="text-text-primary">88%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-secondary rounded-full" style="width: 88%"></div>
+                  </div>
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted pt-space-xs">
+                    <span>Responsive Web Coding</span><span class="text-text-primary">82%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-secondary-container rounded-full" style="width: 82%"></div>
+                  </div>
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted pt-space-xs">
+                    <span>Micro-Interactions</span><span class="text-text-primary">75%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-glow-cyan rounded-full" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#FigmaTokens</span>
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#TailwindCSS</span>
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#HTML5</span>
+              </div>
+            </div>
+            <!-- Column 3: Roblox Studio & Worlds -->
+            <div class="p-space-lg rounded-xl bg-surface-card flex flex-col justify-between shadow-lg">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+                    <span class="material-symbols-outlined text-[24px]">stadia_controller</span>
+                  </div>
+                  <span class="px-space-sm py-1 rounded-md bg-surface-container-highest text-tertiary font-label-mono-sm text-label-mono-sm font-semibold">Intermediate</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-text-primary mb-space-xs">Roblox Studio &amp; Worlds</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md leading-relaxed">
+                  นำเข้าและ Optimize 3D Meshes จาก Blender เข้าสู่เอนจินเกม Roblox Studio อย่างลื่นไหล จัดวาง Dynamic Lighting, Atmosphere Fog และ Collision Mesh แบบ Exact Performance
+                </p>
+                <div class="space-y-space-xs mb-space-md">
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted">
+                    <span>Mesh Optimization &amp; Collision</span><span class="text-text-primary">80%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-tertiary rounded-full" style="width: 80%"></div>
+                  </div>
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted pt-space-xs">
+                    <span>Atmospheric Lighting</span><span class="text-text-primary">72%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-tertiary-container rounded-full" style="width: 72%"></div>
+                  </div>
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted pt-space-xs">
+                    <span>Basic Lua Environment Integration</span><span class="text-text-primary">55%</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+                    <div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 55%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#RobloxStudio</span>
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#AssetImport</span>
+                <span class="px-2 py-0.5 rounded bg-surface-container-low text-text-muted font-label-mono-sm text-label-mono-sm">#LevelDesign</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+        <!-- 5. Interactive Feature & Skills Growth Roadmap (Split Grid) -->
+        <section class="relative z-10 w-full mb-space-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+            <!-- Interactive Topology Simulator Widget -->
+            <div class="lg:col-span-6 p-space-lg md:p-space-xl rounded-xl bg-surface-card shadow-xl flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-sm">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-secondary text-[22px]">tune</span>
+                    <h3 class="font-headline-sm text-headline-sm text-text-primary">Interactive Topology Simulator</h3>
+                  </div>
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary bg-surface-container-high px-2 py-0.5 rounded">REALTIME CALC</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-text-muted mb-space-lg">ทดสอบสมดุลการปรับแต่ง Mesh Optimization ระหว่างรายละเอียดของงาน Low-Poly กับผลกระทบต่อ Draw Calls และ Frame Budget</p>
+                <div class="space-y-space-xs mb-space-md">
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+                    <span class="text-on-surface-variant">Asset Poly Resolution (Tris)</span>
+                    <span class="text-primary font-bold" id="polyValue">1,250 Tris</span>
+                  </div>
+                  <input class="w-full h-1.5 bg-surface-container-lowest rounded-lg appearance-none cursor-pointer accent-primary" id="polyRange" max="5000" min="200" oninput="updateSimulator()" step="50" type="range" value="1250"/>
+                  <div class="flex justify-between font-label-mono-sm text-label-mono-sm text-text-muted text-[10px]">
+                    <span>Ultra Low (200)</span><span>Target Low-Poly (1.5k)</span><span>Dense (5k)</span>
+                  </div>
+                </div>
+                <div class="space-y-space-xs mb-space-lg">
+                  <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm">
+                    <span class="text-on-surface-variant">Material Slots / Texture Atlas</span>
+                    <span class="text-secondary font-bold" id="matValue">2 Materials</span>
+                  </div>
+                  <input class="w-full h-1.5 bg-surface-container-lowest rounded-lg appearance-none cursor-pointer accent-secondary" id="matRange" max="8" min="1" oninput="updateSimulator()" step="1" type="range" value="2"/>
+                  <div class="flex justify-between font-label-mono-sm text-label-mono-sm text-text-muted text-[10px]">
+                    <span>1 (Single Atlas)</span><span>4 (Standard)</span><span>8 (Heavy)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-space-md rounded-lg bg-surface-container-lowest grid grid-cols-3 gap-space-sm text-center">
+                <div class="flex flex-col items-center">
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">Draw Calls</span>
+                  <span class="font-headline-sm text-headline-sm text-secondary font-bold" id="metricDrawCalls">2 DC</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary text-[10px]">Optimal</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">VRAM Burden</span>
+                  <span class="font-headline-sm text-headline-sm text-primary font-bold" id="metricVRAM">14.2 MB</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-primary text-[10px]">Lightweight</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">Engine Target</span>
+                  <span class="font-headline-sm text-headline-sm text-tertiary font-bold" id="metricEngine">60 FPS</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-tertiary text-[10px]">Roblox &amp; Web</span>
+                </div>
+              </div>
+            </div>
+            <!-- Next Horizon Roadmap Matrix -->
+            <div class="lg:col-span-6 p-space-lg md:p-space-xl rounded-xl bg-surface-card shadow-xl flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-sm">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-primary text-[22px]">rocket_launch</span>
+                    <h3 class="font-headline-sm text-headline-sm text-text-primary">Next Horizon: Skills Growth Roadmap</h3>
+                  </div>
+                  <span class="font-label-mono-sm text-label-mono-sm text-primary bg-surface-container-high px-2 py-0.5 rounded">DIAI EVOLUTION</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-text-muted mb-space-md">แผนการพัฒนาทักษะเฉพาะทางเพื่อผสานเทคโนโลยีปัญญาประดิษฐ์และคอมพิวเตอร์กราฟิก 3 มิติในหลักสูตร DIAI มหาวิทยาลัยรังสิต</p>
+                <div class="space-y-space-md">
+                  <div class="flex items-start gap-space-md p-space-sm rounded-lg bg-surface-container-high/60">
+                    <div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span class="material-symbols-outlined text-[18px]">progress_activity</span>
+                    </div>
+                    <div class="min-w-0">
+                      <div class="flex items-center gap-space-xs">
+                        <span class="font-label-mono-sm text-label-mono-sm font-semibold text-primary">PHASE 01 // ACTIVE</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                      </div>
+                      <h4 class="font-headline-sm text-headline-sm text-text-primary text-[17px]">Advanced Shading &amp; Stylized Textures</h4>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">ศึกษา Node-based procedural shaders ใน Blender และการวาด Hand-painted textures เพื่อสร้างสุนทรียภาพที่เฉพาะตัว</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-space-md p-space-sm rounded-lg bg-surface-container-low">
+                    <div class="w-8 h-8 rounded-full bg-secondary/20 text-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span class="material-symbols-outlined text-[18px]">account_tree</span>
+                    </div>
+                    <div class="min-w-0">
+                      <span class="font-label-mono-sm text-label-mono-sm font-semibold text-secondary">PHASE 02 // Q3 2025</span>
+                      <h4 class="font-headline-sm text-headline-sm text-text-primary text-[17px]">Geometry Nodes &amp; Procedural Worlds</h4>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">การสร้างโลกและฉาก 3 มิติแบบ Algorithmic generation เพื่อลดระยะเวลาการสร้างสภาพแวดล้อมขนาดใหญ่</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-space-md p-space-sm rounded-lg bg-surface-container-low">
+                    <div class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+                    </div>
+                    <div class="min-w-0">
+                      <span class="font-label-mono-sm text-label-mono-sm font-semibold text-tertiary">PHASE 03 // DIAI RESEARCH</span>
+                      <h4 class="font-headline-sm text-headline-sm text-text-primary text-[17px]">AI 3D Pipeline (Gaussian Splatting &amp; Gen3D)</h4>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">ประยุกต์ใช้วิทยาการปัญญาประดิษฐ์จากวิทยาลัย DIAI ในการ Reconstruction วัตถุจริงเป็น 3D Splats และ AI Mesh Retopology</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-md flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted">
+                <span>CURRICULUM: DIAI RSU</span>
+                <span class="text-secondary flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">verified</span>ACADEMIC YEAR 2024-2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bottom Action Ribbon: Fast Connect -->
+        <section class="relative z-10 w-full p-space-lg rounded-xl bg-gradient-to-r from-surface-card via-surface-container to-surface-card shadow-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+          <div class="flex items-center gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center flex-shrink-0">
+              <span class="material-symbols-outlined text-[26px]">chat</span>
+            </div>
+            <div>
+              <h4 class="font-headline-sm text-headline-sm text-text-primary">สนใจร่วมงาน 3D Modeling หรือพัฒนาโปรเจกต์เว็บ?</h4>
+              <p class="font-body-sm text-body-sm text-text-muted">พร้อมร่วมงานกับทีมเกมอินดี้ หรือโปรเจกต์ Frontend ที่ต้องการมิติใหม่ของภาพ 3 มิติ</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm flex-shrink-0">
+            <a class="px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold hover:opacity-90 transition-opacity flex items-center gap-space-xs shadow-md" href="mailto:nattakorn.r69@rsu.ac.th">
+              <span class="material-symbols-outlined text-[18px]">send</span>ส่งข้อความหาณฐกร
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest py-space-xl">
+    <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="font-label-mono-sm text-label-mono-sm text-text-muted">Web Programming Project • Rangsit University (RSU)</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">College of Digital Innovation Technology (DIAI) • Student ID 6903090</p>
+        <p class="font-label-mono-sm text-label-mono-sm text-outline-variant mt-space-xs">© 2024 Nattakorn Rattanarak (นายณฐกร รัตนารักษ์). All rights reserved.</p>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <a class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-secondary hover:text-on-surface transition-colors" href="https://instagram.com/_chxf1" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">alternate_email</span>@_chxf1
+        </a>
+        <a class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-secondary hover:text-on-surface transition-colors" href="mailto:nattakorn.r69@rsu.ac.th">
+          <span class="material-symbols-outlined text-[16px]">mail</span>nattakorn.r69@rsu.ac.th
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Asset Inspection Modal (Client Micro-interaction) -->
+  <div class="fixed inset-0 z-50 hidden bg-surface-dark/90 backdrop-blur-xl flex items-center justify-center p-margin-mobile" id="asset-modal">
+    <div class="max-w-md w-full p-space-lg rounded-xl bg-surface-card shadow-2xl flex flex-col gap-space-md relative animate-fadeIn">
+      <button class="absolute top-space-sm right-space-sm p-1 rounded-lg bg-surface-container-high text-on-surface hover:text-primary transition-colors" onclick="closeAssetModal()" type="button">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+      <div class="flex items-center gap-space-xs text-primary font-label-mono-sm text-label-mono-sm">
+        <span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+        <span>INSPECTION METADATA</span>
+      </div>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-text-primary" id="modal-title">Asset Name</h3>
+        <p class="font-body-sm text-body-sm text-text-muted mt-space-xs" id="modal-desc">Technical description</p>
+      </div>
+      <div class="grid grid-cols-2 gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest font-label-mono-sm text-label-mono-sm">
+        <div>
+          <span class="text-text-muted block text-[10px]">POLYGONS</span>
+          <span class="text-secondary font-semibold" id="modal-tris">1,200 Tris</span>
+        </div>
+        <div>
+          <span class="text-text-muted block text-[10px]">SHADING PIPELINE</span>
+          <span class="text-tertiary font-semibold" id="modal-shader">Cycles Render</span>
+        </div>
+      </div>
+      <button class="w-full py-space-xs rounded-lg bg-surface-container-high font-label-mono-sm text-label-mono-sm text-text-primary hover:bg-surface-container-highest transition-colors" onclick="closeAssetModal()" type="button">
+        Close Inspector
+      </button>
+    </div>
+  </div>
+
+  <!-- Inline Vanilla Script for Micro-interactions -->
+  <script>
+    function setGalleryFilter(category, buttonElement) {
+      const pills = document.querySelectorAll('.filter-pill');
+      pills.forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-high');
+      });
+      buttonElement.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-sm');
+      buttonElement.classList.remove('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-high');
+
+      const label = document.getElementById('gallery-filter-label');
+      if (label) {
+        label.textContent = buttonElement.textContent.trim();
+      }
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    function updateSimulator() {
+      const polySlider = document.getElementById('polyRange');
+      const matSlider = document.getElementById('matRange');
+      const polyValue = document.getElementById('polyValue');
+      const matValue = document.getElementById('matValue');
+      
+      const drawCalls = document.getElementById('metricDrawCalls');
+      const vram = document.getElementById('metricVRAM');
+      const engine = document.getElementById('metricEngine');
+
+      const pVal = parseInt(polySlider.value, 10);
+      const mVal = parseInt(matSlider.value, 10);
+
+      polyValue.textContent = pVal.toLocaleString() + ' Tris';
+      matValue.textContent = mVal + (mVal === 1 ? ' Material' : ' Materials');
+
+      drawCalls.textContent = (mVal * 1) + ' DC';
+      const calculatedVRAM = ((pVal * 0.0035) + (mVal * 4.8)).toFixed(1);
+      vram.textContent = calculatedVRAM + ' MB';
+
+      if (pVal > 3500 || mVal > 5) {
+        engine.textContent = '30-45 FPS';
+        engine.className = 'font-headline-sm text-headline-sm text-error font-bold';
+      } else {
+        engine.textContent = '60 FPS';
+        engine.className = 'font-headline-sm text-headline-sm text-tertiary font-bold';
+      }
+    }
+
+    function inspectAssetModal(title, tris, shader, desc) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-tris').textContent = tris;
+      document.getElementById('modal-shader').textContent = shader;
+      document.getElementById('modal-desc').textContent = desc;
+      const modal = document.getElementById('asset-modal');
+      modal.classList.remove('hidden');
+    }
+
+    function closeAssetModal() {
+      const modal = document.getElementById('asset-modal');
+      modal.classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

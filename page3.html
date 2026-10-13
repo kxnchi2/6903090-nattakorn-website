@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  
+  <!-- เชื่อมต่อไฟล์ CSS ที่เราแยกไว้ -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- โหลด Tailwind CSS จาก CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- เชื่อมต่อไฟล์ Config ของ Tailwind ที่เราแยกไว้ -->
+  <script src="tailwind-config.js"></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+  
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 w-full z-50 bg-surface-dark/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm">
+        <div class="h-9 w-9 rounded-xl bg-surface-card flex items-center justify-center">
+          <span class="font-headline-sm text-headline-sm font-bold text-primary">NR</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-text-primary leading-none">Nattakorn R.</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-text-muted mt-space-xs">RSU DIAI | Web Programming</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-space-xs">
+        <a href="page1.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Overview</a>
+        <a href="page2.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Skills &amp; 3D</a>
+        <!-- หน้าปัจจุบัน: Experience -->
+        <a href="page3.html" aria-current="page" class="px-space-sm py-space-xs transition-colors bg-surface-container-high text-primary font-medium rounded-xl">Experience</a>
+        <a href="page4.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Education &amp; Contact</a>
+      </nav>
+      <div class="flex items-center gap-space-sm">
+        <div class="hidden sm:flex items-center px-space-sm py-space-xs rounded-xl bg-surface-container-low">
+          <span class="font-label-mono-sm text-label-mono-sm text-secondary">ID: 6903090</span>
+        </div>
+        <a class="hidden lg:inline-flex items-center px-space-sm py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold hover:opacity-90 transition-opacity" href="mailto:nattakorn.r69@rsu.ac.th">Contact</a>
+        <div class="relative flex items-center justify-center">
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://th.bing.com/th/id/OIP.OPTqIjOBCQW8t4_Q_hv83wHaHa?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"/>
+          <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-dark"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]">
+    <div class="flex flex-col w-full">
+      <div class="max-w-[1200px] w-full mx-auto px-margin-mobile md:px-margin py-space-xl flex flex-col gap-space-xl">
+        
+        <!-- Top Meta Context Bar -->
+        <div class="relative bg-surface-dark rounded-xl p-space-lg shadow-xl overflow-hidden">
+          <div class="absolute -top-16 -right-16 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-16 -left-16 w-64 h-64 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="relative flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-space-sm flex-wrap">
+                <span class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>LIVE RECORD
+                </span>
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">SYSTEM IDENTIFIER: 6903090 // RSU DIAI</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary bg-surface-container-low px-space-xs rounded">PORTFOLIO.V24</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">VERIFIED TRACK RECORD &amp; CAREER HIGHLIGHTS</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">นายณฐกร รัตนารักษ์ — บันทึกประวัติและผลลัพธ์เชิงประจักษ์ด้านการบริหารระบบอินเทอร์แอคทีฟ ภาวะผู้นำยุทธวิธี และการผลิตสื่อดิจิทัล 3 มิติ</p>
+            </div>
+            <div class="flex items-center gap-space-sm self-start lg:self-center">
+              <div class="h-10 px-space-md rounded-xl bg-surface-card flex items-center gap-space-xs text-text-primary font-label-mono-sm text-label-mono-sm shadow-md">
+                <span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+                <span>ACCREDITED RECORD</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 4-Column Stat Counter Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+            <!-- Stat 1 -->
+            <div class="relative bg-surface-card rounded-xl p-space-md flex flex-col justify-between overflow-hidden shadow-md group hover:bg-surface-container-high transition-colors">
+              <div class="h-1 w-full absolute top-0 left-0 bg-primary-container"></div>
+              <div class="flex items-center justify-between text-text-muted mb-space-sm">
+                <span class="font-label-mono-sm text-label-mono-sm tracking-widest uppercase">Roblox Metaverse</span>
+                <span class="material-symbols-outlined text-[18px] text-primary">sports_esports</span>
+              </div>
+              <div class="font-display-hero text-display-hero text-text-primary tracking-tight font-bold">1.2M+</div>
+              <div class="flex items-center justify-between mt-space-xs">
+                <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">TOTAL VISITS</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-primary">+142% MoM</span>
+              </div>
+            </div>
+            <!-- Stat 2 -->
+            <div class="relative bg-surface-card rounded-xl p-space-md flex flex-col justify-between overflow-hidden shadow-md group hover:bg-surface-container-high transition-colors">
+              <div class="h-1 w-full absolute top-0 left-0 bg-secondary"></div>
+              <div class="flex items-center justify-between text-text-muted mb-space-sm">
+                <span class="font-label-mono-sm text-label-mono-sm tracking-widest uppercase">Concurrent Traffic</span>
+                <span class="material-symbols-outlined text-[18px] text-secondary">group</span>
+              </div>
+              <div class="font-display-hero text-display-hero text-text-primary tracking-tight font-bold">500+</div>
+              <div class="flex items-center justify-between mt-space-xs">
+                <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">PEAK CCU DAILY</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary">Sustained</span>
+              </div>
+            </div>
+            <!-- Stat 3 -->
+            <div class="relative bg-surface-card rounded-xl p-space-md flex flex-col justify-between overflow-hidden shadow-md group hover:bg-surface-container-high transition-colors">
+              <div class="h-1 w-full absolute top-0 left-0 bg-tertiary"></div>
+              <div class="flex items-center justify-between text-text-muted mb-space-sm">
+                <span class="font-label-mono-sm text-label-mono-sm tracking-widest uppercase">Microtransactions</span>
+                <span class="material-symbols-outlined text-[18px] text-tertiary">monetization_on</span>
+              </div>
+              <div class="font-display-hero text-display-hero text-text-primary tracking-tight font-bold">10k+</div>
+              <div class="flex items-center justify-between mt-space-xs">
+                <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">REVENUE (THB)</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-tertiary">Robux Cash-out</span>
+              </div>
+            </div>
+            <!-- Stat 4 -->
+            <div class="relative bg-surface-card rounded-xl p-space-md flex flex-col justify-between overflow-hidden shadow-md group hover:bg-surface-container-high transition-colors">
+              <div class="h-1 w-full absolute top-0 left-0 bg-glow-cyan"></div>
+              <div class="flex items-center justify-between text-text-muted mb-space-sm">
+                <span class="font-label-mono-sm text-label-mono-sm tracking-widest uppercase">Leadership Scope</span>
+                <span class="material-symbols-outlined text-[18px] text-glow-cyan">military_tech</span>
+              </div>
+              <div class="font-display-hero text-display-hero text-text-primary tracking-tight font-bold">100+</div>
+              <div class="flex items-center justify-between mt-space-xs">
+                <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">CADETS COMMANDED</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-glow-cyan">Air Scout Troop</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Timeline & Deep-Dive Experience Grid -->
+        <div class="flex flex-col gap-space-xl">
+          <div class="flex items-end justify-between">
+            <div>
+              <span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-widest block mb-space-xs">// MILESTONES &amp; ROLES</span>
+              <h3 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">Structured Timeline &amp; Key Deliverables</h3>
+            </div>
+            <div class="hidden sm:flex items-center gap-space-xs text-text-muted font-label-mono-sm text-label-mono-sm">
+              <span class="w-2 h-2 rounded-full bg-secondary"></span>
+              <span>CHRONOLOGICAL MATRIX</span>
+            </div>
+          </div>
+          
+          <div class="relative flex flex-col gap-space-xl">
+            <!-- Left vertical track bar -->
+            <div class="hidden lg:block absolute left-8 top-6 bottom-6 w-0.5 bg-surface-container-high -z-0"></div>
+            
+            <!-- Section 1: Gaming & Metaverse -->
+            <div class="relative flex flex-col lg:flex-row gap-space-lg items-start">
+              <!-- Timeline Indicator Icon -->
+              <div class="hidden lg:flex w-16 h-16 rounded-full bg-surface-dark items-center justify-center shrink-0 z-10 shadow-lg mt-2">
+                <div class="w-10 h-10 rounded-full bg-surface-card flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined text-[20px]">stadia_controller</span>
+                </div>
+              </div>
+              <!-- Main Card Content -->
+              <div class="flex-1 w-full bg-surface-dark rounded-xl p-space-lg shadow-xl overflow-hidden flex flex-col gap-space-lg">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+                  <div>
+                    <div class="flex items-center gap-space-xs flex-wrap mb-1">
+                      <span class="font-label-mono-sm text-label-mono-sm text-primary uppercase font-bold tracking-wider">01 / GAMING &amp; METAVERSE</span>
+                      <span class="text-text-muted">•</span>
+                      <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Independent Project • 2022 - ปัจจุบัน</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-text-primary tracking-tight">Game Creator &amp; Level Architect (Roblox Metaverse)</h4>
+                  </div>
+                  <div class="flex items-center gap-space-xs self-start md:self-auto">
+                    <span class="px-space-sm py-1 rounded-xl bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm font-semibold flex items-center gap-1">
+                      <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>Active Operations
+                    </span>
+                  </div>
+                </div>
+                <!-- 2-Column Split: Context & Visual Analytics -->
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-stretch">
+                  <div class="xl:col-span-7 flex flex-col justify-between gap-space-md">
+                    <div class="flex flex-col gap-space-sm">
+                      <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                        ผู้พัฒนาเกมและผู้ออกแบบประสบการณ์ในระบบนิเวศ Roblox สามารถผลักดันสถิติผู้เล่นทะลุ <strong class="text-text-primary font-semibold">500 คน/วัน</strong> ยอดการเข้าชมสะสมมากกว่า <strong class="text-text-primary font-semibold">1.2 ล้านครั้ง (Visits)</strong> พร้อมกลยุทธ์ In-Game Economy ที่สร้างรายได้รวมกว่า <strong class="text-text-primary font-semibold">10,000 บาท</strong>
+                      </p>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        ออกแบบ Game Loop วางโครงข่าย Level Design ที่เน้น Retention Rate สูง จัดการโครงสร้างดาต้าเบส Lua Client-Server State Synchronization และการควบคุม In-Game Currency เพื่อกระตุ้น Microtransactions ผ่าน Virtual Gamepasses
+                      </p>
+                    </div>
+                    <div class="flex flex-wrap gap-space-xs mt-space-xs">
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-primary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">brush</span> Game Design</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-primary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">map</span> Level Design</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-primary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">paid</span> In-Game Monetization</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-primary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">forum</span> Community Management</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-primary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">code</span> Lua Scripting</span>
+                    </div>
+                  </div>
+                  <!-- Visual Analytics Box & Chart -->
+                  <div class="xl:col-span-5 bg-surface-card rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-md">
+                    <div class="flex items-center justify-between">
+                      <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">Player Retention &amp; Traction</span>
+                      <span class="px-space-xs py-0.5 rounded bg-primary-container/20 text-primary font-label-mono-sm text-label-mono-sm font-bold">+142% MoM</span>
+                    </div>
+                    <div class="w-full py-space-xs">
+                      <svg class="w-full h-24 overflow-visible" fill="none" viewbox="0 0 300 80">
+                        <defs>
+                          <lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0%" stop-color="#ffb2b9" stop-opacity="0.4"></stop>
+                            <stop offset="100%" stop-color="#ffb2b9" stop-opacity="0.0"></stop>
+                          </lineargradient>
+                        </defs>
+                        <path d="M0 65 Q 40 60, 75 52 T 150 40 T 225 20 T 300 8 L 300 80 L 0 80 Z" fill="url(#chartGradient)"></path>
+                        <path d="M0 65 Q 40 60, 75 52 T 150 40 T 225 20 T 300 8" fill="none" stroke="#ffb2b9" stroke-linecap="round" stroke-width="2.5"></path>
+                        <circle class="fill-surface-dark stroke-primary" cx="75" cy="52" r="3.5" stroke-width="2"></circle>
+                        <circle class="fill-surface-dark stroke-primary" cx="150" cy="40" r="3.5" stroke-width="2"></circle>
+                        <circle class="fill-surface-dark stroke-primary" cx="225" cy="20" r="3.5" stroke-width="2"></circle>
+                        <circle class="fill-primary stroke-surface-dark" cx="300" cy="8" r="4.5" stroke-width="2"></circle>
+                      </svg>
+                      <div class="flex justify-between items-center text-text-muted font-label-mono-sm text-label-mono-sm mt-1 px-1">
+                        <span>LAUNCH</span><span>Q2 EXPANSION</span><span>VIRAL PEAK</span><span class="text-primary font-bold">CURRENT</span>
+                      </div>
+                    </div>
+                    <div class="pt-space-xs flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+                      <div class="flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[16px] text-secondary">trending_up</span>
+                        <span>Avg Session: <span class="text-text-primary font-semibold">14.8m</span></span>
+                      </div>
+                      <div class="flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[16px] text-glow-cyan">repeat</span>
+                        <span>Day-7 Return: <span class="text-text-primary font-semibold">38.4%</span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Section 2: Leadership & Discipline -->
+            <div class="relative flex flex-col lg:flex-row gap-space-lg items-start">
+              <div class="hidden lg:flex w-16 h-16 rounded-full bg-surface-dark items-center justify-center shrink-0 z-10 shadow-lg mt-2">
+                <div class="w-10 h-10 rounded-full bg-surface-card flex items-center justify-center text-secondary">
+                  <span class="material-symbols-outlined text-[20px]">shield</span>
+                </div>
+              </div>
+              <div class="flex-1 w-full bg-surface-dark rounded-xl p-space-lg shadow-xl overflow-hidden flex flex-col gap-space-lg">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+                  <div>
+                    <div class="flex items-center gap-space-xs flex-wrap mb-1">
+                      <span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase font-bold tracking-wider">02 / LEADERSHIP &amp; DISCIPLINE</span>
+                      <span class="text-text-muted">•</span>
+                      <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Air Scout Special Troop • กองร้อยพิเศษ</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-text-primary tracking-tight">อดีตประธานลูกเสืออากาศ (กองร้อยพิเศษ)</h4>
+                  </div>
+                  <div class="flex items-center gap-space-xs self-start md:self-auto">
+                    <span class="px-space-sm py-1 rounded-xl bg-surface-container-high text-secondary font-label-mono-sm text-label-mono-sm font-semibold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px]">military_tech</span>Honorable Command
+                    </span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-center">
+                  <div class="xl:col-span-7 flex flex-col gap-space-md">
+                    <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                      ดำรงตำแหน่งผู้นำสูงสุดของกองร้อยพิเศษ บริหารจัดการกำลังพล วางแผนยุทธวิธีและฝึกซ้อมภาคปฏิบัติ จัดการสื่อสารภาวะวิกฤต พร้อมประสานงานโครงสร้างองค์กรอย่างมีระเบียบวินัยและความรับผิดชอบขั้นสูงสุด
+                    </p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                      เป็นแกนหลักในการควบคุมระเบียบแถว กำกับแผนการซ้อมภาคสนามประจำปี (Field Training Exercises) และจัดสรรสายงานผู้รับผิดชอบกว่า 8 กองหมู่ ยกระดับการทำงานเป็นทีมภายใต้ความกดดันสูง ซึ่งหล่อหลอมทักษะการบริหารจัดการโปรเจกต์ซอฟต์แวร์แบบ Agile ในปัจจุบัน
+                    </p>
+                    <div class="flex flex-wrap gap-space-xs mt-space-xs">
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-secondary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">psychology</span> Strategic Leadership</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-secondary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">crisis_alert</span> Crisis Management</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-secondary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">hub</span> Team Coordination</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-secondary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">verified</span> High Discipline</span>
+                    </div>
+                  </div>
+                  <div class="xl:col-span-5 bg-surface-card rounded-xl p-space-md flex flex-col gap-space-md shadow-md">
+                    <div class="flex items-center justify-between text-text-muted">
+                      <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-wider">COMMAND METRICS &amp; DISPATCH</span>
+                      <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-space-sm">
+                      <div class="bg-surface-container rounded-xl p-space-sm flex flex-col justify-center">
+                        <span class="font-display-hero-mobile text-display-hero-mobile text-secondary font-bold leading-tight">100+</span>
+                        <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1">กำลังพลใต้การบังคับบัญชา</span>
+                      </div>
+                      <div class="bg-surface-container rounded-xl p-space-sm flex flex-col justify-center">
+                        <span class="font-display-hero-mobile text-display-hero-mobile text-glow-cyan font-bold leading-tight">100%</span>
+                        <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant mt-1">อัตราความสำเร็จภารกิจ</span>
+                      </div>
+                    </div>
+                    <div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs text-body-sm font-body-sm">
+                      <div class="flex items-center justify-between text-text-muted font-label-mono-sm text-label-mono-sm">
+                        <span>UNIT PROTOCOL</span><span class="text-secondary">AIR FORCE AFFILIATED</span>
+                      </div>
+                      <div class="flex items-center gap-space-xs text-on-surface">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span>บริหารกำลังพล 8 กองหมู่ประจำการภาคสนาม</span>
+                      </div>
+                      <div class="flex items-center gap-space-xs text-on-surface">
+                        <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                        <span>ซ้อมแผนเผชิญเหตุฉุกเฉินและระบบสื่อสารวิทยุ</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Section 3: Digital Creative Studio -->
+            <div class="relative flex flex-col lg:flex-row gap-space-lg items-start">
+              <div class="hidden lg:flex w-16 h-16 rounded-full bg-surface-dark items-center justify-center shrink-0 z-10 shadow-lg mt-2">
+                <div class="w-10 h-10 rounded-full bg-surface-card flex items-center justify-center text-tertiary">
+                  <span class="material-symbols-outlined text-[20px]">view_in_ar</span>
+                </div>
+              </div>
+              <div class="flex-1 w-full bg-surface-dark rounded-xl p-space-lg shadow-xl overflow-hidden flex flex-col gap-space-lg">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+                  <div>
+                    <div class="flex items-center gap-space-xs flex-wrap mb-1">
+                      <span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase font-bold tracking-wider">03 / DIGITAL CREATIVE STUDIO</span>
+                      <span class="text-text-muted">•</span>
+                      <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Studio Founder • ก่อตั้ง 2023</span>
+                    </div>
+                    <h4 class="font-headline-md text-headline-md text-text-primary tracking-tight">เจ้าของ Kammakorn Studio (Founder &amp; Creative Director)</h4>
+                  </div>
+                  <div class="flex items-center gap-space-xs self-start md:self-auto">
+                    <span class="px-space-sm py-1 rounded-xl bg-surface-container-high text-tertiary font-label-mono-sm text-label-mono-sm font-semibold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px]">rocket_launch</span>Commercial Studio
+                    </span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-stretch">
+                  <div class="xl:col-span-7 flex flex-col justify-between gap-space-md">
+                    <div class="flex flex-col gap-space-sm">
+                      <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                        สตูดิโอสร้างสรรค์ดิจิทัลคอนเทนต์ ออกแบบโมเดล 3D และโครงงานสื่อปฏิสัมพันธ์เพื่อการประยุกต์ใช้ในเกมและเว็บยุคใหม่ มุ่งเน้นการบูรณาการเทคโนโลยีคอมพิวเตอร์กราฟิกเข้ากับประสบการณ์ผู้ใช้
+                      </p>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        พัฒนา Hard-Surface 3D Props, Low-poly WebGL Assets, PBR Shader Workflows รวมถึงการออกแบบอัตลักษณ์แบรนด์ (Brand Identity Design) ให้ตอบสนองทั้งประสิทธิภาพการเรนเดอร์แบบ Real-time และความสวยงามเชิงศิลป์
+                      </p>
+                    </div>
+                    <div class="flex flex-wrap gap-space-xs mt-space-xs">
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-tertiary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary">deployed_code</span> 3D Hard-Surface</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-tertiary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary">design_services</span> Creative Direction</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-tertiary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary">architecture</span> Blender Pipeline</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-tertiary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary">speed</span> Asset Optimization</span>
+                      <span class="px-space-sm py-1 rounded-xl bg-surface-card text-on-surface text-label-mono-sm font-label-mono-sm hover:text-tertiary transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-tertiary">auto_fix_high</span> Brand Identity</span>
+                    </div>
+                  </div>
+                  <div class="xl:col-span-5 bg-surface-card rounded-xl overflow-hidden flex flex-col shadow-md">
+                    <div class="relative w-full h-44 overflow-hidden">
+                      <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic 3D hard-surface digital asset model viewed in a futuristic dark CAD viewport software. Intricate mechanical geometry with neon cyan and soft magenta edge luminescence, dark obsidian matte materials, wireframe overlays, high-end technical rendering aesthetic matching a modern game design pipeline." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs_fIzB4b_N5k8dw88drQtTVAjshbGEHuJzR4o727C8YCM0dMhk_1KfZleBXyXK2eVC3L3mwcSzpPwFwYVznLCrtU2PIja0IxfFAF-5bTXJGWqNzpYfjrAC_zc445vEOlI_B4OnI6gjIiDkZy7WUFwys6VT2KZug0rA_9_77bQnA51eic_agP4Y-XIZ73oZjGPkFyE8sQ51wCptkujFEvLzy7UT7YoabWY8U-UwSBkFocuw0-lnWZS"/>
+                      <div class="absolute inset-0 bg-gradient-to-t from-surface-card via-transparent to-transparent"></div>
+                      <div class="absolute top-space-xs right-space-xs px-space-xs py-0.5 rounded bg-surface-dark/90 backdrop-blur font-label-mono-sm text-label-mono-sm text-tertiary">
+                        BLENDER // REAL-TIME
+                      </div>
+                    </div>
+                    <div class="p-space-md flex flex-col gap-space-xs">
+                      <div class="flex items-center justify-between text-body-sm font-body-sm">
+                        <span class="font-semibold text-text-primary">Kammakorn Asset Library</span>
+                        <span class="font-label-mono-sm text-label-mono-sm text-text-muted">GLTF / FBX / OBJ</span>
+                      </div>
+                      <div class="flex items-center justify-between text-label-mono-sm font-label-mono-sm text-on-surface-variant">
+                        <span>Draw-call optimization &lt; 30 calls</span>
+                        <span class="text-tertiary font-bold">Web Ready</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Web Programming Alignment & Technical Readiness Panel -->
+        <div class="relative bg-surface-dark rounded-xl p-space-lg md:p-space-xl shadow-xl overflow-hidden">
+          <div class="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-lg">
+            <div>
+              <span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-widest block mb-space-xs">// ACADEMIC &amp; INDUSTRY SYNTHESIS</span>
+              <h3 class="font-headline-lg text-headline-lg text-text-primary tracking-tight">Web Programming Alignment &amp; Technical Readiness</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-3xl">
+                การผสานประสบการณ์จริงจากโลก Metaverse และการบังคับบัญชา เข้าสู่วิชาชีพการพัฒนา Web Application ชั้นสูง (College of Digital Innovation Technology, RSU)
+              </p>
+            </div>
+            <div class="shrink-0">
+              <div class="px-space-md py-space-xs rounded-xl bg-surface-card text-glow-cyan font-label-mono-sm text-label-mono-sm flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[18px]">terminal</span>
+                <span>SYSTEM READINESS: HIGH</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+            <div class="bg-surface-card rounded-xl p-space-md flex flex-col justify-between gap-space-md shadow-md">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center justify-between">
+                  <span class="material-symbols-outlined text-primary text-[24px]">database</span>
+                  <span class="font-display-hero-mobile text-display-hero-mobile text-primary font-bold">95%</span>
+                </div>
+                <h5 class="font-headline-sm text-headline-sm text-text-primary mt-space-xs">Logic &amp; Systems Architecture</h5>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  สถาปัตยกรรมระบบตรรกะระดับสูง ต่อยอดจากการเขียนสคริปต์ Game Engine และ State Management รองรับ Real-time WebSockets, REST APIs, และ Data Pipeline
+                </p>
+              </div>
+              <div>
+                <div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+                  <div class="bg-primary h-full rounded-full" style="width: 95%"></div>
+                </div>
+                <div class="flex justify-between items-center text-label-mono-sm font-label-mono-sm text-text-muted mt-space-xs">
+                  <span>Full-Stack Readiness</span><span class="text-primary font-bold">95 / 100</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-surface-card rounded-xl p-space-md flex flex-col justify-between gap-space-md shadow-md">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center justify-between">
+                  <span class="material-symbols-outlined text-secondary text-[24px]">view_in_ar</span>
+                  <span class="font-display-hero-mobile text-display-hero-mobile text-secondary font-bold">90%</span>
+                </div>
+                <h5 class="font-headline-sm text-headline-sm text-text-primary mt-space-xs">UI/UX &amp; 3D Web Integration</h5>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  การรวม 3D Computer Graphics เข้ากับ Web Front-end ยุคใหม่ (Three.js, WebGL Shaders, Tailwind CSS) มอบ User Experience ที่โดดเด่นและมีประสิทธิภาพสูง
+                </p>
+              </div>
+              <div>
+                <div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+                  <div class="bg-secondary h-full rounded-full" style="width: 90%"></div>
+                </div>
+                <div class="flex justify-between items-center text-label-mono-sm font-label-mono-sm text-text-muted mt-space-xs">
+                  <span>Interactive Graphics</span><span class="text-secondary font-bold">90 / 100</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-surface-card rounded-xl p-space-md flex flex-col justify-between gap-space-md shadow-md">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center justify-between">
+                  <span class="material-symbols-outlined text-tertiary text-[24px]">groups</span>
+                  <span class="font-display-hero-mobile text-display-hero-mobile text-tertiary font-bold">92%</span>
+                </div>
+                <h5 class="font-headline-sm text-headline-sm text-text-primary mt-space-xs">Agile Leadership &amp; Team Sprinting</h5>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  วินัยเข้มข้นจากประสบการณ์ประธานกองร้อยพิเศษ ถ่ายทอดสู่กระบวนการ Sprint Planning การประสานงานลูกทีมอย่างแม่นยำ และการแก้ปัญหาในสถานการณ์กดดัน
+                </p>
+              </div>
+              <div>
+                <div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+                  <div class="bg-tertiary h-full rounded-full" style="width: 92%"></div>
+                </div>
+                <div class="flex justify-between items-center text-label-mono-sm font-label-mono-sm text-text-muted mt-space-xs">
+                  <span>Project Management</span><span class="text-tertiary font-bold">92 / 100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Action Navigation Row -->
+          <div class="mt-space-lg pt-space-md bg-surface-container-low rounded-xl p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-sm">
+              <div class="w-10 h-10 rounded-xl bg-surface-card flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-body-md text-body-md text-text-primary font-semibold">สนใจตรวจสอบผลงาน 3D หรือข้อมูลวิชาการเพิ่มเติม?</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">RSU Digital Innovation &amp; Artificial Intelligence (DIAI)</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-sm w-full sm:w-auto">
+              <a href="page2.html" class="w-full sm:w-auto px-space-md py-space-xs rounded-xl bg-surface-card text-on-surface hover:text-text-primary hover:bg-surface-container-high font-label-mono-sm text-label-mono-sm text-center transition-colors shadow">
+                ดูทักษะ 3D &amp; Tech Stack
+              </a>
+              <a class="w-full sm:w-auto px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold text-center hover:opacity-90 transition-opacity shadow" href="mailto:nattakorn.r69@rsu.ac.th">
+                ติดต่อสอบถาม
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest py-space-xl">
+    <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="font-label-mono-sm text-label-mono-sm text-text-muted">Web Programming Project • Rangsit University (RSU)</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">College of Digital Innovation Technology (DIAI) • Student ID 6903090</p>
+        <p class="font-label-mono-sm text-label-mono-sm text-outline-variant mt-space-xs">© 2024 Nattakorn Rattanarak (นายณฐกร รัตนารักษ์). All rights reserved.</p>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <a class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-secondary hover:text-on-surface transition-colors" href="https://instagram.com/_chxf1" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">alternate_email</span>@_chxf1
+        </a>
+        <a class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-secondary hover:text-on-surface transition-colors" href="mailto:nattakorn.r69@rsu.ac.th">
+          <span class="material-symbols-outlined text-[16px]">mail</span>nattakorn.r69@rsu.ac.th
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

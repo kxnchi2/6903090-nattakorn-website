@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  
+  <!-- เชื่อมต่อไฟล์ CSS ที่เราแยกไว้ -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- โหลด Tailwind CSS จาก CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- เชื่อมต่อไฟล์ Config ของ Tailwind ที่เราแยกไว้ -->
+  <script src="tailwind-config.js"></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+  
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 w-full z-50 bg-surface-dark/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm">
+        <div class="h-9 w-9 rounded-xl bg-surface-card flex items-center justify-center">
+          <span class="font-headline-sm text-headline-sm font-bold text-primary">NR</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-text-primary leading-none">Nattakorn R.</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-text-muted mt-space-xs">RSU DIAI | Web Programming</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-space-xs">
+        <a href="page1.html" aria-current="page" class="px-space-sm py-space-xs transition-colors bg-surface-container-high text-primary font-medium rounded-xl">Overview</a>
+        <a href="page2.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Skills &amp; 3D</a>
+        <a href="page3.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Experience</a>
+        <a href="page4.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Education &amp; Contact</a>
+      </nav>
+      <div class="flex items-center gap-space-sm">
+        <div class="hidden sm:flex items-center px-space-sm py-space-xs rounded-xl bg-surface-container-low">
+          <span class="font-label-mono-sm text-label-mono-sm text-secondary">ID: 6903090</span>
+        </div>
+        <a class="hidden lg:inline-flex items-center px-space-sm py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold hover:opacity-90 transition-opacity" href="mailto:nattakorn.r69@rsu.ac.th">Contact</a>
+        <div class="relative flex items-center justify-center">
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://th.bing.com/th/id/OIP.OPTqIjOBCQW8t4_Q_hv83wHaHa?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"/>
+          <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-dark"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]">
+    <div class="flex flex-col w-full">
+      <div class="relative w-full overflow-hidden">
+        <div class="absolute top-12 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+        <div class="absolute top-64 right-10 w-[30rem] h-[30rem] bg-secondary-container/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+        
+        <section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin pt-space-lg pb-space-xl">
+          <div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
+            <div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-secondary">
+              <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              <span class="font-label-mono-sm text-label-mono-sm tracking-wider uppercase">STATUS: ACTIVE • STUDENT ID: 6903090 • DIAI RESEARCH LAB</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-space-md">
+              <span class="font-label-mono-sm text-label-mono-sm text-text-muted">TERM // SEMESTER 2024</span>
+              <span class="font-label-mono-sm text-label-mono-sm text-primary">COLLEGE OF DIGITAL INNOVATION TECHNOLOGY</span>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+            <div class="lg:col-span-7 flex flex-col justify-between p-space-lg md:p-space-xl rounded-xl bg-surface-dark shadow-xl">
+              <div class="flex flex-col sm:flex-row gap-space-lg items-start">
+                <div class="relative group shrink-0">
+                  <div class="absolute -inset-1 rounded-xl bg-gradient-to-tr from-primary-container via-glow-cyan to-tertiary-container opacity-70 blur-sm group-hover:opacity-100 transition-opacity"></div>
+                  <div class="relative w-36 h-36 md:w-44 md:h-44 rounded-xl overflow-hidden bg-surface-card">
+                    <img alt="นายณฐกร รัตนารักษ์" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg3Q0SKsmC5Dr0nTulMCXorwpwEM9GU2Xuu92xnVtbSoYucIblrrztT82eU5I-Bn4OlY_4voDLeDz7LvVuQHO_lS6lfXv_VhSKxxjNM_o_eo1VdgWbuwG-saquw596Oddn-nUZtjpLE5kHRIERSXmuGPEJglC-_R7eR5TzPfU5MKOobVeskKu-1BVtY6KXvyofgR3h99utGPi753V0kgvY2REldPfxoPlDLHakP90RlJykrAPx8maH0yX-bOxVmlDWLA"/>
+                    <div class="absolute bottom-2 right-2 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-dark/90 backdrop-blur-sm">
+                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                      <span class="font-label-mono-sm text-label-mono-sm text-text-primary text-[10px]">ONLINE</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary tracking-widest uppercase">PORTFOLIO OVERVIEW</span>
+                  <h1 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mt-1">ณฐกร รัตนารักษ์</h1>
+                  <p class="font-label-mono-lg text-label-mono-lg text-primary font-medium mt-0.5">Nattakorn Rattanarak</p>
+                  <div class="mt-space-sm flex items-center gap-space-xs text-text-muted">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">school</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Digital Innovation &amp; AI (DIAI) @ RSU</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-text-muted mt-space-xs line-clamp-2">Specializing in interactive Web Programming, Low-Poly 3D Blender modeling, and intelligent UX/UI architecture.</p>
+                </div>
+              </div>
+              <div class="mt-space-lg pt-space-md flex flex-wrap items-center gap-space-sm bg-surface-container-low p-space-sm rounded-xl">
+                <a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold hover:opacity-95 shadow-md transition-all" href="mailto:nattakorn.r69@rsu.ac.th">
+                  <span class="material-symbols-outlined text-[18px]">alternate_email</span> nattakorn.r69@rsu.ac.th
+                </a>
+                <a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-card hover:bg-surface-container-high text-secondary font-label-mono-sm text-label-mono-sm font-medium transition-colors" href="https://instagram.com/_chxf1" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[18px]">photo_camera</span> @_chxf1
+                </a>
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted ml-auto hidden sm:inline">SEC: 01 • 2024</span>
+              </div>
+            </div>
+            <div class="lg:col-span-5 grid grid-cols-2 gap-space-sm">
+              <div class="p-space-md rounded-xl bg-surface-card flex flex-col justify-between hover:bg-surface-container-high transition-colors shadow-sm">
+                <div class="flex items-center justify-between">
+                  <span class="p-2 rounded-xl bg-surface-container text-glow-cyan"><span class="material-symbols-outlined text-[22px]">visibility</span></span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted">MAP REACH</span>
+                </div>
+                <div class="mt-space-md">
+                  <div class="font-display-hero text-[40px] leading-tight font-bold text-text-primary tracking-tight">1.2M+</div>
+                  <p class="font-label-mono-sm text-label-mono-sm text-secondary font-medium mt-1">Roblox Visits</p>
+                  <p class="font-body-sm text-body-sm text-text-muted mt-0.5 text-xs">Level Design &amp; Lua Scripting</p>
+                </div>
+              </div>
+              <div class="p-space-md rounded-xl bg-surface-card flex flex-col justify-between hover:bg-surface-container-high transition-colors shadow-sm">
+                <div class="flex items-center justify-between">
+                  <span class="p-2 rounded-xl bg-surface-container text-primary"><span class="material-symbols-outlined text-[22px]">groups</span></span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted">CONCURRENT</span>
+                </div>
+                <div class="mt-space-md">
+                  <div class="font-display-hero text-[40px] leading-tight font-bold text-text-primary tracking-tight">500+</div>
+                  <p class="font-label-mono-sm text-label-mono-sm text-primary font-medium mt-1">Peak CCU / Day</p>
+                  <p class="font-body-sm text-body-sm text-text-muted mt-0.5 text-xs">Realtime Active Players</p>
+                </div>
+              </div>
+              <div class="p-space-md rounded-xl bg-surface-card flex flex-col justify-between hover:bg-surface-container-high transition-colors shadow-sm">
+                <div class="flex items-center justify-between">
+                  <span class="p-2 rounded-xl bg-surface-container text-tertiary"><span class="material-symbols-outlined text-[22px]">monetization_on</span></span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted">ECONOMY</span>
+                </div>
+                <div class="mt-space-md">
+                  <div class="font-display-hero text-[34px] leading-tight font-bold text-text-primary tracking-tight">10,000+</div>
+                  <p class="font-label-mono-sm text-label-mono-sm text-tertiary font-medium mt-1">THB Generated</p>
+                  <p class="font-body-sm text-body-sm text-text-muted mt-0.5 text-xs">In-game Microtransactions</p>
+                </div>
+              </div>
+              <div class="p-space-md rounded-xl bg-surface-card flex flex-col justify-between hover:bg-surface-container-high transition-colors shadow-sm">
+                <div class="flex items-center justify-between">
+                  <span class="p-2 rounded-xl bg-surface-container text-secondary"><span class="material-symbols-outlined text-[22px]">view_in_ar</span></span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted">STUDIO</span>
+                </div>
+                <div class="mt-space-md">
+                  <div class="font-display-hero text-[28px] leading-tight font-bold text-text-primary tracking-tight">Founder</div>
+                  <p class="font-label-mono-sm text-label-mono-sm text-secondary font-medium mt-1">Kammakorn Studio</p>
+                  <p class="font-body-sm text-body-sm text-text-muted mt-0.5 text-xs">3D Props &amp; Content Engine</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin py-space-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            <div class="lg:col-span-8 p-space-xl rounded-xl bg-surface-container-low shadow-lg">
+              <div class="flex items-center gap-space-xs text-primary mb-space-sm">
+                <span class="material-symbols-outlined text-[20px]">terminal</span>
+                <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest font-semibold">About Me • บทนำและวิสัยทัศน์</span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-text-primary font-bold tracking-tight">ผสานนวัตกรรม AI, งานออกแบบ UI/UX, และโลกเสมือน 3D เข้าไว้ด้วยกัน</h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mt-space-md leading-relaxed">นิสิตสาขา <span class="text-text-primary font-medium">Digital Innovation &amp; AI (DIAI)</span> คณะวิทยาลัยนวัตกรรมดิจิทัลเทคโนโลยี มหาวิทยาลัยรังสิต ผู้มีความหลงใหลลึกซึ้งในการพัฒนา UX/UI สำหรับเว็บแอปพลิเคชันยุคใหม่ ควบคู่ไปกับความชื่นชอบในงาน 3D Modeling ด้วย Blender มุ่งเน้นการผสมผสานศาสตร์นวัตกรรมดิจิทัล ปัญญาประดิษฐ์ และงานออกแบบอินเทอร์เฟซเข้าด้วยกัน เพื่อสร้างประสบการณ์ผู้ใช้ที่มีความหมายและลื่นไหล</p>
+              <div class="mt-space-lg flex flex-wrap gap-2">
+                <span class="px-space-sm py-1 rounded-xl bg-surface-card text-glow-cyan font-label-mono-sm text-label-mono-sm">#WebProgramming</span>
+                <span class="px-space-sm py-1 rounded-xl bg-surface-card text-primary font-label-mono-sm text-label-mono-sm">#UIUXDesign</span>
+                <span class="px-space-sm py-1 rounded-xl bg-surface-card text-secondary font-label-mono-sm text-label-mono-sm">#Blender3D</span>
+                <span class="px-space-sm py-1 rounded-xl bg-surface-card text-tertiary font-label-mono-sm text-label-mono-sm">#LowPoly</span>
+                <span class="px-space-sm py-1 rounded-xl bg-surface-card text-text-primary font-label-mono-sm text-label-mono-sm">#RobloxStudio</span>
+                <span class="px-space-sm py-1 rounded-xl bg-surface-card text-text-muted font-label-mono-sm text-label-mono-sm">#CreativeComputing</span>
+              </div>
+            </div>
+            <div class="lg:col-span-4 p-space-lg rounded-xl bg-surface-dark flex flex-col justify-between h-full shadow-lg">
+              <div>
+                <div class="flex items-center justify-between pb-space-sm">
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">ACADEMIC MATRIX</span>
+                  <span class="material-symbols-outlined text-secondary text-[20px]">analytics</span>
+                </div>
+                <p class="font-headline-sm text-headline-sm font-semibold text-text-primary mt-space-sm">RSU DIAI Profile</p>
+                <p class="font-body-sm text-body-sm text-text-muted">Digital Innovation &amp; Artificial Intelligence</p>
+                <div class="my-space-md p-space-sm rounded-xl bg-surface-container-lowest flex items-center justify-center">
+                  <svg class="w-full h-32 text-secondary" fill="none" viewbox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 20 H190 M10 50 H190 M10 80 H190" stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" stroke-width="1"></path>
+                    <path d="M40 10 V90 M100 10 V90 M160 10 V90" stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" stroke-width="1"></path>
+                    <defs>
+                      <lineargradient id="cyberGrad" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.4"></stop>
+                        <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.0"></stop>
+                      </lineargradient>
+                    </defs>
+                    <polygon fill="url(#cyberGrad)" points="20,70 55,30 95,50 140,20 180,35 180,85 20,85"></polygon>
+                    <polyline points="20,70 55,30 95,50 140,20 180,35" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+                    <circle class="fill-primary" cx="20" cy="70" r="3"></circle>
+                    <circle class="fill-secondary" cx="55" cy="30" r="3.5"></circle>
+                    <circle class="fill-tertiary" cx="95" cy="50" r="3"></circle>
+                    <circle class="fill-glow-cyan" cx="140" cy="20" r="4"></circle>
+                    <circle class="fill-primary" cx="180" cy="35" r="3"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="space-y-space-xs font-label-mono-sm text-label-mono-sm">
+                <div class="flex justify-between text-text-muted"><span>Curriculum Focus</span><span class="text-text-primary">Applied AI &amp; Web</span></div>
+                <div class="flex justify-between text-text-muted"><span>Faculty</span><span class="text-text-primary">College of DIT</span></div>
+                <div class="flex justify-between text-text-muted"><span>Campus</span><span class="text-secondary">Rangsit Main (RSU)</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin py-space-xl">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-lg gap-space-sm">
+            <div>
+              <span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-widest">PROVEN TRACK RECORD</span>
+              <h2 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mt-1">ผลงานสำคัญและประสบการณ์ปฏิบัติจริง</h2>
+            </div>
+            <span class="font-label-mono-sm text-label-mono-sm text-text-muted">MILESTONES 01 — 03</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+            <div class="p-space-lg rounded-xl bg-surface-dark flex flex-col justify-between hover:bg-surface-card transition-all duration-300 shadow-md group">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[24px]">sports_esports</span></span>
+                  <span class="font-label-mono-sm text-label-mono-sm px-2 py-0.5 rounded-full bg-surface-container-high text-primary">GAME DEV</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-text-primary mt-space-md">Roblox Game Economy &amp; World</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">ออกแบบแผนที่แนว Low-Poly และเขียนระบบการเล่นด้วย Lua Scripting จนสร้างยอดผู้เข้าชมทะลุ 1.2M+ ครั้ง รักษาอัตราผู้เล่นพร้อมกันสูงสุด 500 CCU/วัน และทำรายได้มากกว่า 10,000 บาท</p>
+              </div>
+              <div class="mt-space-lg pt-space-sm bg-surface-container-lowest p-space-sm rounded-xl">
+                <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted"><span>Impact</span><span class="text-glow-cyan font-bold">1.2M Visits / 10k THB</span></div>
+                <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted mt-1"><span>Stack</span><span class="text-text-primary">Roblox Studio • Lua</span></div>
+              </div>
+            </div>
+            <div class="p-space-lg rounded-xl bg-surface-dark flex flex-col justify-between hover:bg-surface-card transition-all duration-300 shadow-md group">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[24px]">token</span></span>
+                  <span class="font-label-mono-sm text-label-mono-sm px-2 py-0.5 rounded-full bg-surface-container-high text-secondary">FOUNDER</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-text-primary mt-space-md">Kammakorn Studio</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">ผู้ก่อตั้งและ Creative Director สตูดิโอผลิตโมเดล 3D คุณภาพสูง เน้นโมเดล Props อุปกรณ์ Hard-Surface และ Asset สำหรับเกม ปรับแต่ง Topology ให้เบา ประหยัดทรัพยากรเครื่อง</p>
+              </div>
+              <div class="mt-space-lg pt-space-sm bg-surface-container-lowest p-space-sm rounded-xl">
+                <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted"><span>Pipeline</span><span class="text-secondary font-bold">Hard-Surface • Low-Poly</span></div>
+                <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted mt-1"><span>Tools</span><span class="text-text-primary">Blender • Substance</span></div>
+              </div>
+            </div>
+            <div class="p-space-lg rounded-xl bg-surface-dark flex flex-col justify-between hover:bg-surface-card transition-all duration-300 shadow-md group">
+              <div>
+                <div class="flex items-center justify-between">
+                  <span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[24px]">military_tech</span></span>
+                  <span class="font-label-mono-sm text-label-mono-sm px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary">LEADERSHIP</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm font-bold text-text-primary mt-space-md">อดีตประธานลูกเสืออากาศ กองร้อยพิเศษ</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">บริหารจัดการกองร้อยพิเศษ วางแผนกลยุทธ์ ฝึกฝนระเบียบวินัย และขับเคลื่อนกิจกรรมของทีมอย่างเป็นระบบ สร้างรากฐานทักษะการเป็นผู้นำและการแก้ปัญหาเฉพาะหน้าในระดับสูง</p>
+              </div>
+              <div class="mt-space-lg pt-space-sm bg-surface-container-lowest p-space-sm rounded-xl">
+                <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted"><span>Role</span><span class="text-tertiary font-bold">Former Troop President</span></div>
+                <div class="flex items-center justify-between font-label-mono-sm text-label-mono-sm text-text-muted mt-1"><span>Competencies</span><span class="text-text-primary">Strategic Team Lead</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin pt-space-md pb-space-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <div class="lg:col-span-7 p-space-xl rounded-xl bg-surface-container-low shadow-lg">
+              <div class="flex items-center justify-between mb-space-md">
+                <div>
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider">TECHNICAL MASTERY</span>
+                  <h3 class="font-headline-md text-headline-md font-bold text-text-primary">ความเชี่ยวชาญทางเทคนิค</h3>
+                </div>
+                <span class="material-symbols-outlined text-secondary text-[24px]">layers</span>
+              </div>
+              <div class="mb-space-md">
+                <div class="flex justify-between items-center mb-1"><span class="font-body-md text-body-md font-semibold text-text-primary">Blender 3D Modeling (Low-Poly &amp; Topology)</span><span class="font-label-mono-sm text-label-mono-sm text-secondary">92%</span></div>
+                <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden"><div class="h-full bg-secondary rounded-full" style="width: 92%;"></div></div>
+                <p class="font-label-mono-sm text-label-mono-sm text-text-muted mt-1">Asset creation for real-time engines, UV unwrap, hard surfaces</p>
+              </div>
+              <div class="mb-space-md">
+                <div class="flex justify-between items-center mb-1"><span class="font-body-md text-body-md font-semibold text-text-primary">UX/UI &amp; Design Systems (Figma / Web Standards)</span><span class="font-label-mono-sm text-label-mono-sm text-primary">88%</span></div>
+                <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 88%;"></div></div>
+                <p class="font-label-mono-sm text-label-mono-sm text-text-muted mt-1">Wireframing, cyber dark-mode aesthetics, responsive architecture</p>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-1"><span class="font-body-md text-body-md font-semibold text-text-primary">Web Programming (HTML5 / Tailwind CSS / JS)</span><span class="font-label-mono-sm text-label-mono-sm text-tertiary">85%</span></div>
+                <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden"><div class="h-full bg-tertiary-container rounded-full" style="width: 85%;"></div></div>
+                <p class="font-label-mono-sm text-label-mono-sm text-text-muted mt-1">Component architecture, interactive DOM events, API-ready interfaces</p>
+              </div>
+            </div>
+            <div class="lg:col-span-5 p-space-xl rounded-xl bg-surface-dark flex flex-col justify-between shadow-xl relative overflow-hidden">
+              <div class="relative z-10">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container/20 text-primary mb-space-md">
+                  <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                  <span class="font-label-mono-sm text-label-mono-sm uppercase font-semibold">Ready for Academic Collabs</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md font-bold text-text-primary">Web Programming Project Collaboration</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">พร้อมสำหรับการร่วมโปรเจกต์รายวิชา การค้นคว้าด้านนวัตกรรม AI และงานพัฒนาเว็บไซต์เชิงสร้างสรรค์ สามารถติดต่อเพื่อนัดหมายพูดคุยหรือส่งข้อความโดยตรง</p>
+              </div>
+              <div class="mt-space-lg relative z-10 space-y-space-sm">
+                <a class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold hover:opacity-95 shadow-lg transition-transform active:scale-[0.98]" href="mailto:nattakorn.r69@rsu.ac.th">
+                  <span class="material-symbols-outlined text-[20px]">send</span> Send Direct Inquiry to Nattakorn
+                </a>
+                <div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-lowest font-label-mono-sm text-label-mono-sm text-text-muted">
+                  <span>Academic Contact:</span><span class="text-secondary font-medium">nattakorn.r69@rsu.ac.th</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest py-space-xl">
+    <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="font-label-mono-sm text-label-mono-sm text-text-muted">Web Programming Project • Rangsit University (RSU)</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">College of Digital Innovation Technology (DIAI) • Student ID 6903090</p>
+        <p class="font-label-mono-sm text-label-mono-sm text-outline-variant mt-space-xs">© 2024 Nattakorn Rattanarak (นายณฐกร รัตนารักษ์). All rights reserved.</p>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <a class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-secondary hover:text-on-surface transition-colors" href="https://instagram.com/_chxf1" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">alternate_email</span>@_chxf1
+        </a>
+        <a class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-secondary hover:text-on-surface transition-colors" href="mailto:nattakorn.r69@rsu.ac.th">
+          <span class="material-symbols-outlined text-[16px]">mail</span>nattakorn.r69@rsu.ac.th
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

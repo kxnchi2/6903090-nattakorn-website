@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  
+  <!-- เชื่อมต่อไฟล์ CSS ที่เราแยกไว้ -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- โหลด Tailwind CSS จาก CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- เชื่อมต่อไฟล์ Config ของ Tailwind ที่เราแยกไว้ -->
+  <script src="tailwind-config.js"></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+  
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 w-full z-50 bg-surface-dark/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm">
+        <div class="h-9 w-9 rounded-xl bg-surface-card flex items-center justify-center">
+          <span class="font-headline-sm text-headline-sm font-bold text-primary">NR</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm tracking-tight text-text-primary leading-none">Nattakorn R.</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-text-muted mt-space-xs">RSU DIAI | Web Programming</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-space-xs">
+        <a href="page1.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Overview</a>
+        <a href="page2.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Skills &amp; 3D</a>
+        <a href="page3.html" class="px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors rounded-xl">Experience</a>
+        <!-- หน้าปัจจุบัน: Education & Contact -->
+        <a href="page4.html" aria-current="page" class="px-space-sm py-space-xs transition-colors bg-surface-container-high text-primary font-medium rounded-xl">Education &amp; Contact</a>
+      </nav>
+      <div class="flex items-center gap-space-sm">
+        <div class="hidden sm:flex items-center px-space-sm py-space-xs rounded-xl bg-surface-container-low">
+          <span class="font-label-mono-sm text-label-mono-sm text-secondary">ID: 6903090</span>
+        </div>
+        <a class="hidden lg:inline-flex items-center px-space-sm py-space-xs rounded-xl bg-primary-container text-on-primary-container font-label-mono-sm text-label-mono-sm font-semibold hover:opacity-90 transition-opacity" href="mailto:nattakorn.r69@rsu.ac.th">Contact</a>
+        <div class="relative flex items-center justify-center">
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVp3b73gLyEnbgXcvHT6D9AT_LZQ7cxXTCXLpACUHsiqZARH7K5oTyaE3HI9wUWEIPCKhe650BisNsIBmC03N8nc5_prRQBnoY9n8OUY-YZUDflbDYdIfD4Sudml6lcWKQ1AAXANwUiDHw47ycsiahCEjjLun4F39FWLJGHj4Ax56OxWQlDpyiKbljHgnlsk3Isf3_MUGzdpuFE5k8yFY9GXG_kHwt1d5vFlvPpCMMohdvaGg4GeHr"/>
+          <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-dark"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]">
+    <div class="flex flex-col w-full">
+      <!-- Ambient Glow Behind Header Section -->
+      <div class="relative w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin pt-space-xl">
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+        <div class="absolute top-12 left-10 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+        
+        <!-- 1. Submission & Academic Context Banner -->
+        <div class="w-full bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden shadow-xl mb-space-xl">
+          <div class="absolute -right-16 -top-16 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md relative z-10">
+            <div class="flex flex-col gap-space-xs max-w-2xl">
+              <div class="flex items-center gap-space-xs">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm font-semibold tracking-wider uppercase">
+                  <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                  Official Academic Record
+                </span>
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">| Web Programming Assessment</span>
+              </div>
+              <h1 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mt-space-xs">
+                Education &amp; Contact Registry
+              </h1>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Curriculum tracking, institutional affiliations, and direct peer-to-peer transmission portal for 
+                <span class="text-text-primary font-medium">Nattakorn Rattanarak</span> (นายณฐกร รัตนารักษ์).
+              </p>
+            </div>
+            <!-- Academic Key Meta Badges -->
+            <div class="flex flex-wrap lg:flex-col items-start lg:items-end gap-space-xs pt-space-xs lg:pt-0">
+              <div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-card">
+                <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">STATUS:</span>
+                <span class="font-label-mono-sm text-label-mono-sm font-semibold text-secondary">ACTIVE ENROLLMENT</span>
+              </div>
+              <div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-card">
+                <span class="material-symbols-outlined text-primary text-[18px]">badge</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">STUDENT ID:</span>
+                <span class="font-label-mono-sm text-label-mono-sm font-bold text-text-primary">6903090</span>
+              </div>
+              <div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high">
+                <span class="material-symbols-outlined text-glow-cyan text-[18px]">domain</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-on-surface-variant">COLLEGE OF DIGITAL INNOVATION (RSU)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Quick Metrics Ribbon inside context card -->
+          <div class="mt-space-lg pt-space-md grid grid-cols-2 md:grid-cols-4 gap-space-md">
+            <div class="flex flex-col">
+              <span class="font-label-mono-sm text-label-mono-sm uppercase text-text-muted">Degree Progress</span>
+              <span class="font-headline-sm text-headline-sm font-bold text-text-primary">Year 01 // Sem 02</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-mono-sm text-label-mono-sm uppercase text-text-muted">Specialization</span>
+              <span class="font-headline-sm text-headline-sm font-bold text-primary">D.I. &amp; AI (นวัตกรรมฯ)</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-mono-sm text-label-mono-sm uppercase text-text-muted">Primary Domain</span>
+              <span class="font-headline-sm text-headline-sm font-bold text-secondary">3D Real-time &amp; Web</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-mono-sm text-label-mono-sm uppercase text-text-muted">Security Protocol</span>
+              <span class="font-label-mono-lg text-label-mono-lg text-tertiary flex items-center gap-1 font-semibold">
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> RSU-AUTH-OK
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 2. Education Milestones: 2-Column Desktop Grid -->
+        <div class="w-full mb-space-xl">
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="flex items-center gap-space-xs">
+              <span class="h-2 w-2 rounded-full bg-secondary"></span>
+              <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-text-muted">Academic History &amp; Pipeline</span>
+            </div>
+            <span class="font-label-mono-sm text-label-mono-sm text-outline">SEC_01 // EDUCATION</span>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+            <!-- University Milestone (Left Column) -->
+            <div class="bg-surface-dark rounded-xl p-space-lg flex flex-col justify-between relative shadow-md hover:shadow-xl transition-all">
+              <div class="flex flex-col">
+                <div class="flex items-start justify-between gap-space-sm mb-space-md">
+                  <div class="flex items-center gap-space-sm">
+                    <div class="w-12 h-12 rounded-xl bg-surface-card flex items-center justify-center text-primary shadow-sm">
+                      <span class="material-symbols-outlined text-[28px]">school</span>
+                    </div>
+                    <div>
+                      <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-mono-sm text-label-mono-sm font-medium mb-1">
+                        Undergraduate Study
+                      </span>
+                      <h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">
+                        Rangsit University (RSU)
+                      </h3>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">มหาวิทยาลัยรังสิต</p>
+                    </div>
+                  </div>
+                  <span class="font-label-mono-sm text-label-mono-sm px-2.5 py-1 rounded bg-surface-container-high text-secondary font-semibold shrink-0">
+                    2024 - PRESENT
+                  </span>
+                </div>
+                <!-- Program Details -->
+                <div class="space-y-space-sm mb-space-md bg-surface-container-lowest/60 p-space-md rounded-lg">
+                  <div class="flex items-baseline justify-between gap-space-xs">
+                    <span class="font-label-mono-sm text-label-mono-sm text-text-muted">College:</span>
+                    <span class="font-body-sm text-body-sm font-semibold text-text-primary text-right">วิทยาลัยนวัตกรรมดิจิทัลเทคโนโลยี (College of Digital Innovation Technology)</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-space-xs">
+                    <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Program:</span>
+                    <span class="font-body-sm text-body-sm font-semibold text-primary text-right">นวัตกรรมดิจิทัลและปัญญาประดิษฐ์ (Digital Innovation &amp; AI)</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-space-xs">
+                    <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Student ID:</span>
+                    <span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">6903090</span>
+                  </div>
+                </div>
+                <!-- Lab & Focus Tags -->
+                <div class="space-y-space-xs mb-space-md">
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase tracking-wider block">Lab Deployments &amp; Research Focus:</span>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2.5 py-1 rounded bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> D.I.&amp;A.I. Research Lab
+                    </span>
+                    <span class="px-2.5 py-1 rounded bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-glow-cyan"></span> Applied Machine Learning
+                    </span>
+                    <span class="px-2.5 py-1 rounded bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 3D Creative Coding
+                    </span>
+                    <span class="px-2.5 py-1 rounded bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Web Systems Architecture
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Academic Footer Callout -->
+              <div class="pt-space-sm bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Core Syllabus: Web Programming &amp; Intelligent Interfaces</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold flex items-center gap-1">
+                  DIAI-RSU <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+            
+            <!-- High School Milestone (Right Column) -->
+            <div class="bg-surface-dark rounded-xl p-space-lg flex flex-col justify-between relative shadow-md hover:shadow-xl transition-all">
+              <div class="flex flex-col">
+                <div class="flex items-start justify-between gap-space-sm mb-space-md">
+                  <div class="flex items-center gap-space-sm">
+                    <div class="w-12 h-12 rounded-xl bg-surface-card flex items-center justify-center text-secondary shadow-sm">
+                      <span class="material-symbols-outlined text-[28px]">local_library</span>
+                    </div>
+                    <div>
+                      <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-mono-sm text-label-mono-sm font-medium mb-1">
+                        Secondary Milestone
+                      </span>
+                      <h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">
+                        Rittiyawannalai 2 School
+                      </h3>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">โรงเรียนฤทธิยะวรรณาลัย ๒</p>
+                    </div>
+                  </div>
+                  <span class="font-label-mono-sm text-label-mono-sm px-2.5 py-1 rounded bg-surface-container-high text-text-muted font-semibold shrink-0">
+                    GRADUATED
+                  </span>
+                </div>
+                <!-- Secondary Education Details -->
+                <div class="space-y-space-sm mb-space-md bg-surface-container-lowest/60 p-space-md rounded-lg">
+                  <div class="flex items-baseline justify-between gap-space-xs">
+                    <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Credential:</span>
+                    <span class="font-body-sm text-body-sm font-semibold text-text-primary">High School Diploma (Secondary Education)</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-space-xs">
+                    <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Curriculum Path:</span>
+                    <span class="font-body-sm text-body-sm font-semibold text-secondary">Science, Mathematics &amp; Applied Computing</span>
+                  </div>
+                  <div class="flex items-baseline justify-between gap-space-xs">
+                    <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Affiliation:</span>
+                    <span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">RW2 ALUMNUS // BANGKOK</span>
+                  </div>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+                  Completed rigorous secondary foundational curriculum emphasizing analytical mathematics, physical sciences, algorithmic principles, and early explorations into 3D computer graphics and digital media production.
+                </p>
+                <div class="flex flex-wrap gap-1.5 mb-space-md">
+                  <span class="px-2.5 py-1 rounded bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm">STEM Analytical Track</span>
+                  <span class="px-2.5 py-1 rounded bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm">Foundational Python &amp; Web</span>
+                  <span class="px-2.5 py-1 rounded bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm">Digital Media Prototyping</span>
+                </div>
+              </div>
+              <div class="pt-space-sm bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Alumni Registry: Completed Preparatory Studies</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold">CERTIFIED COMPLETE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 3. Direct Connectivity & Interactive Contact Split -->
+        <div class="w-full mb-space-xl">
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="flex items-center gap-space-xs">
+              <span class="h-2 w-2 rounded-full bg-primary"></span>
+              <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-text-muted">Connectivity &amp; Transmission Hub</span>
+            </div>
+            <span class="font-label-mono-sm text-label-mono-sm text-outline">SEC_02 // TRANSMISSION</span>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+            <!-- Left Column: Academic & Social Nodes (5 Columns) -->
+            <div class="lg:col-span-5 flex flex-col gap-space-md">
+              <!-- Official Student Email Node -->
+              <div class="bg-surface-dark rounded-xl p-space-md flex flex-col shadow-md">
+                <div class="flex items-center gap-space-sm mb-space-xs">
+                  <div class="w-9 h-9 rounded-lg bg-surface-card flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[20px]">alternate_email</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">Official Student Mail</span>
+                    <span class="font-body-sm text-body-sm font-semibold text-text-primary">Rangsit University Domain</span>
+                  </div>
+                </div>
+                <div class="bg-surface-container-lowest p-space-sm rounded-lg my-space-xs flex items-center justify-between">
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary truncate font-semibold" id="email-address">
+                    nattakorn.r69@rsu.ac.th
+                  </span>
+                  <button class="px-2 py-1 rounded bg-surface-card text-on-surface hover:text-primary transition-colors font-label-mono-sm text-label-mono-sm shrink-0 flex items-center gap-1" onclick="navigator.clipboard.writeText('nattakorn.r69@rsu.ac.th'); alert('Copied: nattakorn.r69@rsu.ac.th');" title="Copy email to clipboard">
+                    <span class="material-symbols-outlined text-[14px]">content_copy</span> Copy
+                  </button>
+                </div>
+                <div class="flex items-center gap-space-xs mt-space-xs">
+                  <a class="flex-1 py-2 px-space-sm rounded bg-primary text-on-primary font-label-mono-sm text-label-mono-sm font-semibold flex items-center justify-center gap-1.5 hover:opacity-90 transition-opacity" href="mailto:nattakorn.r69@rsu.ac.th">
+                    <span class="material-symbols-outlined text-[16px]">send</span> Direct Client
+                  </a>
+                  <a class="px-space-sm py-2 rounded bg-surface-container-high text-on-surface font-label-mono-sm text-label-mono-sm flex items-center gap-1 hover:bg-surface-bright transition-colors" href="https://webmail.rsu.ac.th" rel="noopener noreferrer" target="_blank">
+                    <span class="material-symbols-outlined text-[16px]">open_in_new</span> Webmail
+                  </a>
+                </div>
+              </div>
+              <!-- Social / Portfolio Node (Instagram) -->
+              <div class="bg-surface-dark rounded-xl p-space-md flex flex-col shadow-md">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-space-sm">
+                    <div class="w-9 h-9 rounded-lg bg-surface-card flex items-center justify-center text-glow-cyan">
+                      <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+                    </div>
+                    <div>
+                      <span class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">3D Showcase &amp; W.I.P</span>
+                      <h4 class="font-headline-sm text-headline-sm font-bold text-text-primary">@_chxf1</h4>
+                    </div>
+                  </div>
+                  <a class="px-3 py-1.5 rounded-lg bg-surface-container-high text-secondary hover:text-on-surface font-label-mono-sm text-label-mono-sm flex items-center gap-1 transition-colors" href="https://instagram.com/_chxf1" rel="noopener noreferrer" target="_blank">
+                    <span>Feed</span> <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                  </a>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+                  Live updates featuring Blender topology previews, real-time GLSL fragment shaders, procedural node setups, and UI design iterations.
+                </p>
+              </div>
+              <!-- Study Location & University Campus Card -->
+              <div class="bg-surface-dark rounded-xl p-space-md flex flex-col shadow-md">
+                <div class="flex items-center justify-between mb-space-xs">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+                    <span class="font-label-mono-sm text-label-mono-sm font-semibold uppercase text-text-primary">Academic Base &amp; Campus</span>
+                  </div>
+                  <span class="font-label-mono-sm text-label-mono-sm text-text-muted">RSU CAMPUS</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+                  College of Digital Innovation Technology, Building 1, Rangsit University, 52/347 Phahonyothin Rd, Lak Hok, Pathum Thani 12000, Thailand.
+                </p>
+                <!-- Map View Placeholder -->
+                <div class="w-full h-36 bg-cover bg-center rounded-lg relative overflow-hidden flex items-end p-space-sm shadow-inner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKj0Z39H-oOyswTfe-1qiMb-DIhoe0v6uONmOjf99qs7Ff_EVrWX9kUWaLLIbk1ShWnqJMlS3_c6j_EwxM3z_lVByZLNgdfQ6aOfs6yVl669SI9psT_ANMTjV52zSLZO41deGv5jLrORwSuwsTtz4JTHHyAZMWiKy28wgbgr3qVd5imJND-nyuJqlXfQvNAqoWxficv6YFZLOYg5hwr5QZRyoUf3EiGnhjuES7YcFKNx3aip6JqB85');">
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent"></div>
+                  <div class="relative z-10 flex items-center justify-between w-full">
+                    <div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-dark/80 backdrop-blur-md">
+                      <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                      <span class="font-label-mono-sm text-label-mono-sm text-text-primary font-medium">13.9649° N, 100.5877° E</span>
+                    </div>
+                    <a class="font-label-mono-sm text-label-mono-sm text-glow-cyan hover:underline flex items-center gap-0.5" href="https://maps.google.com/?q=Rangsit+University" rel="noopener noreferrer" target="_blank">
+                      Open Map <span class="material-symbols-outlined text-[12px]">open_in_new</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column: Interactive Quick Commission / Contact Form (7 Columns) -->
+            <div class="lg:col-span-7 bg-surface-dark rounded-xl p-space-lg flex flex-col justify-between shadow-xl">
+              <div>
+                <div class="flex items-start justify-between mb-space-md">
+                  <div>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-mono-sm text-label-mono-sm font-semibold mb-1">
+                      RSU-DIAI TRANSMISSION PROTOCOL
+                    </span>
+                    <h3 class="font-headline-md text-headline-md font-bold text-text-primary">
+                      Commission Inquiry &amp; Direct Contact
+                    </h3>
+                  </div>
+                  <div class="w-10 h-10 rounded-xl bg-surface-card flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined">hub</span>
+                  </div>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+                  Available for collaborative research initiatives, 3D asset modeling (Blender/Substance), real-time shader pipelines, and interactive web application prototyping.
+                </p>
+                <form class="space-y-space-md" id="transmission-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden'); this.reset();">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                    <div class="flex flex-col gap-space-xs">
+                      <label class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase" for="sender-name">Sender Identity / Name *</label>
+                      <input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-text-primary font-body-sm text-body-sm placeholder:text-text-muted/40 focus:outline-none focus:ring-1 focus:ring-secondary transition-all" id="sender-name" placeholder="e.g. Dr. John Doe / Studio Agent" required="" type="text"/>
+                    </div>
+                    <div class="flex flex-col gap-space-xs">
+                      <label class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase" for="sender-email">Return Email Channel *</label>
+                      <input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-text-primary font-body-sm text-body-sm placeholder:text-text-muted/40 focus:outline-none focus:ring-1 focus:ring-secondary transition-all" id="sender-email" placeholder="name@domain.com" required="" type="email"/>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-space-xs">
+                    <label class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase">Project Domain / Area of Collaboration</label>
+                    <div class="flex flex-wrap gap-2" id="domain-selector">
+                      <button class="domain-btn px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm hover:text-primary transition-all active-pill" onclick="selectDomain(this)" type="button">3D Asset Modeling</button>
+                      <button class="domain-btn px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm hover:text-primary transition-all" onclick="selectDomain(this)" type="button">AI / Computer Vision</button>
+                      <button class="domain-btn px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm hover:text-primary transition-all" onclick="selectDomain(this)" type="button">UI/UX Web Architecture</button>
+                      <button class="domain-btn px-3 py-1.5 rounded-lg bg-surface-card text-on-surface font-label-mono-sm text-label-mono-sm hover:text-primary transition-all" onclick="selectDomain(this)" type="button">Academic Research</button>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-space-xs">
+                    <div class="flex items-center justify-between">
+                      <label class="font-label-mono-sm text-label-mono-sm text-text-muted uppercase" for="message-content">Transmission Payload (Message) *</label>
+                      <span class="font-label-mono-sm text-label-mono-sm text-outline">MAX 2,000 CHARACTERS</span>
+                    </div>
+                    <textarea class="w-full p-space-md rounded-lg bg-surface-container-lowest text-text-primary font-body-sm text-body-sm placeholder:text-text-muted/40 focus:outline-none focus:ring-1 focus:ring-secondary transition-all resize-none" id="message-content" placeholder="Detail project specs, delivery timelines, or academic coordination topics..." required="" rows="4"></textarea>
+                  </div>
+                  <div class="hidden p-space-sm rounded-lg bg-secondary-container/20 text-secondary font-label-mono-sm text-label-mono-sm flex items-center gap-space-xs" id="form-feedback">
+                    <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                    <span>Transmission packet cached and queued. Thank you for connecting!</span>
+                  </div>
+                  <div class="pt-space-xs flex flex-col sm:flex-row items-center justify-between gap-space-md">
+                    <div class="flex items-center gap-space-xs text-text-muted">
+                      <span class="material-symbols-outlined text-[16px] text-primary">security</span>
+                      <span class="font-label-mono-sm text-label-mono-sm">PGP Signed • Dispatched to student inbox</span>
+                    </div>
+                    <button class="w-full sm:w-auto px-space-xl py-3 rounded-lg bg-primary-container text-on-primary-container font-label-mono-lg text-label-mono-lg font-bold flex items-center justify-center gap-space-xs hover:opacity-95 active:scale-95 transition-all shadow-md" type="submit">
+                      <span>Transmit Message</span>
+                      <span class="material-symbols-outlined text-[18px]">send</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 4. Design & Academic Criteria Specifications -->
+        <div class="w-full mb-space-xl">
+          <div class="flex items-center justify-between mb-space-md">
+            <div class="flex items-center gap-space-xs">
+              <span class="h-2 w-2 rounded-full bg-tertiary"></span>
+              <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-text-muted">Assessment &amp; Engineering Specifications</span>
+            </div>
+            <span class="font-label-mono-sm text-label-mono-sm text-outline">CRITERIA_VERIFICATION</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+            <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">GRID ARCHITECTURE</span>
+                  <span class="material-symbols-outlined text-[18px] text-text-muted">view_quilt</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-space-xs">12-Col Responsive Grid</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Desktop canvas locked at 1200px max-width, adhering to 8px base rhythm increments. Zero explicit container borders, relying strictly on tonal shifts and low-contrast surface card elevations.
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs border-t border-surface-container-high flex items-center justify-between">
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Desktop Spacing</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary">2.0rem Margins</span>
+              </div>
+            </div>
+            <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">TYPOGRAPHIC SYSTEM</span>
+                  <span class="material-symbols-outlined text-[18px] text-text-muted">format_quote</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-space-xs">Grotesk &amp; JetBrains Mono</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Dual-hierarchy typography blending technical JetBrains Mono code tags with Space Grotesk structural headings. Inter is deployed for fluid and accessible body copy readability.
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs border-t border-surface-container-high flex items-center justify-between">
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Hierarchy Pairings</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-glow-cyan">Headline + Label Mono</span>
+              </div>
+            </div>
+            <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+              <div>
+                <div class="flex items-center justify-between mb-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm text-glow-cyan font-bold">CYBERNETIC ACADEMIC PALETTE</span>
+                  <span class="material-symbols-outlined text-[18px] text-text-muted">palette</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-space-xs">Dual-Tone Cyber Tone</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Built on deep obsidian tones (`#111319` canvas, `#161922` surface) contrasted with vivid rose-crimson (`#ffb2b9`) and sky-cyan accents (`#91cdff`) to represent artificial intelligence and real-time graphics.
+                </p>
+              </div>
+              <div class="mt-space-md pt-space-xs border-t border-surface-container-high flex items-center justify-between">
+                <span class="font-label-mono-sm text-label-mono-sm text-text-muted">Evaluation Standard</span>
+                <span class="font-label-mono-sm text-label-mono-sm text-primary">Web Programming RSU</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest py-space-xl">
+    <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="font-label-mono-sm text-label-mono-sm text-text-muted">Web Programming Project • Rangsit University (RSU)</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">College of Digital Innovation Technology (DIAI) • Student ID 6903090</p>
+        <p class="font-label-mono-sm text-label-mono-sm text-outline-variant mt-space-xs">© 2024 Nattakorn Rattanarak (นายณฐกร รัตนารักษ์). All rights reserved.</p>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <a class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-secondary hover:text-on-surface transition-colors" href="https://instagram.com/_chxf1" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">alternate_email</span>@_chxf1
+        </a>
+        <a class="flex items-center gap-space-xs font-label-mono-sm text-label-mono-sm text-secondary hover:text-on-surface transition-colors" href="mailto:nattakorn.r69@rsu.ac.th">
+          <span class="material-symbols-outlined text-[16px]">mail</span>nattakorn.r69@rsu.ac.th
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inline Script for UI Micro-Interactions -->
+  <script>
+    function selectDomain(button) {
+      document.querySelectorAll('.domain-btn').forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary-container');
+        btn.classList.add('bg-surface-card', 'text-on-surface');
+      });
+      button.classList.remove('bg-surface-card', 'text-on-surface');
+      button.classList.add('bg-primary-container', 'text-on-primary-container');
+    }
+  </script>
+</body>
+</html>
